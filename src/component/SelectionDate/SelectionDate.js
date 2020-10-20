@@ -1,16 +1,51 @@
 import React from "react";
 
+import {
+  WrapperDate,
+  DateCell,
+  DayLabel,
+  DateNumber,
+  DateContainer,
+} from "./SelectionDate.sc";
+
 const SelectionDate = () => {
   return (
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <WrapperDate>
+      <DateContainer>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell isSelected>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+        <DateCell>
+          <DayLabel>Sen</DayLabel>
+          <DateNumber>10</DateNumber>
+        </DateCell>
+      </DateContainer>
+    </WrapperDate>
   );
 };
 
