@@ -1,5 +1,7 @@
 import React from "react";
-import AddIcon from "@material-ui/icons/Add";
+import { connect } from "react-redux";
+
+import { setIsCartOpen } from "../../reducer/cart";
 
 import Rating from "./Rating/Rating";
 
@@ -16,7 +18,7 @@ import {
   PlusIcon,
 } from "./MenuItem.sc";
 
-const MenuItem = () => {
+const MenuItem = (props) => {
   return (
     <ContainerItem>
       <ImgBox src="/assets/Food_1.jpg" />
@@ -27,7 +29,7 @@ const MenuItem = () => {
         <ContainerFooter>
           <PriceLabel>Rp. 35.000</PriceLabel>
           <ButtonAdd>
-            <AddLabel>ADD</AddLabel>
+            <AddLabel onClick={props.setIsCartOpen(true)}>ADD</AddLabel>
             <PlusIcon />
           </ButtonAdd>
         </ContainerFooter>
@@ -36,4 +38,16 @@ const MenuItem = () => {
   );
 };
 
-export default MenuItem;
+const mapStateToProps = (state) => ({
+  isCartOpen: state.cart.isCartOpen,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setIsCartOpen(data) {
+    return () => {
+      dispatch(setIsCartOpen(data));
+    };
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuItem);
