@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const ButtonWrapper = styled.div`
-  display: ${(props) => (props.isOpenbtn ? "flex" : "none")};
+  display: flex;
+  visibility: ${(props) => (props.isOpenbtn ? "visible" : "hidden")};
+  opacity: ${(props) => (props.isOpenbtn ? "1" : "0")};
   justify-content: space-between;
   margin-bottom: 16px;
   position: fixed;
   width: 92%;
+  transition: opacity 0.2s, linear;
+  z-index: 1;
 
   button:first-child {
     border-radius: 4px 0 0 4px;
