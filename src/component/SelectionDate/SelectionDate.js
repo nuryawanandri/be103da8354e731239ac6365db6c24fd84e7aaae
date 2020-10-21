@@ -30,8 +30,16 @@ const SelectionDate = (props) => {
             key={index}
             isSelected={props.selectedDate.getTime() === dateItem.getTime()}
           >
-            <DayLabel>{dayslabel[dateItem.getDay()]}</DayLabel>
-            <DateNumber>{dateItem.getDate()}</DateNumber>
+            <DayLabel
+              isHoliday={dateItem.getDay() === 0 || dateItem.getDay() === 6}
+            >
+              {dayslabel[dateItem.getDay()]}
+            </DayLabel>
+            <DateNumber
+              isHoliday={dateItem.getDay() === 0 || dateItem.getDay() === 6}
+            >
+              {dateItem.getDate()}
+            </DateNumber>
           </DateCell>
         ))}
       </DateContainer>

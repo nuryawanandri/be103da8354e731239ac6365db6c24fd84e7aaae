@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import { ButtonWrapper, Button } from "./LunchDinnerButton.sc";
 
-const LunchDinnerButton = () => {
+const LunchDinnerButton = (props) => {
   const [isLunchActive, setIsLunchActive] = useState(true);
 
   return (
-    <ButtonWrapper>
+    <ButtonWrapper isOpenbtn={props.isOpenBtn}>
       <Button
         isActive={isLunchActive}
         onClick={() => {
@@ -27,4 +28,8 @@ const LunchDinnerButton = () => {
   );
 };
 
-export default LunchDinnerButton; 
+const mapStateToProps = (state) => ({
+  isOpenBtn: state.lunchDinnerBtn.isOpenBtn,
+});
+
+export default connect(mapStateToProps)(LunchDinnerButton); 

@@ -26,18 +26,22 @@ export const DateCell = styled.div`
 
   div:first-child {
     font-size: 12px;
+    ${(props) => (props.isSelected ? "color: #f1f1f2 !important" : "")};
   }
 
   div:last-child {
     font-size: 16px;
     font-weight: 600;
+    ${(props) => (props.isSelected ? "color: #f1f1f2 !important" : "")};
   }
 `;
 
 export const DayLabel = styled.div`
   font-size: 12px;
+  color: ${(props) => (props.isHoliday ? "#e2e2e4" : "#424749")};
 `;
 
 export const DateNumber = styled.div`
   font-size: 16px;
+  color: ${(props) => (props.isHoliday ? "#e2e2e4" : "#424749")};
 `;
