@@ -20,8 +20,6 @@ const SelectionDate = (props) => {
       (containerDateRef.current.clientWidth -
         wrapperDateRef.current.clientWidth) /
       2;
-    console.log(containerDateRef);
-    console.log(wrapperDateRef);
   });
 
   return (

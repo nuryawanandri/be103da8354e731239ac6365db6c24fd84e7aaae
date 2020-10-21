@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 
   button:first-child {
     border-radius: 4px 0 0 4px;

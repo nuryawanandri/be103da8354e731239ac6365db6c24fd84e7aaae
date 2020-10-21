@@ -5,6 +5,7 @@ export const WrapperDate = styled.div`
   justify-content: space-between;
   margin-bottom: 16px;
   overflow-x: scroll;
+  margin-bottom: 16px;
 `;
 
 export const DateContainer = styled.div`
