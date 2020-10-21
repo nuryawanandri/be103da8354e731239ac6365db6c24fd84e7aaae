@@ -2,11 +2,8 @@ import React, { useState } from "react";
 
 import { ButtonWrapper, Button } from "./LunchDinnerButton.sc";
 
-import { dayslabel } from "../../utils/constant";
-
 const LunchDinnerButton = () => {
   const [isLunchActive, setIsLunchActive] = useState(true);
-  const [dateList, setDateList] = useState([]);
 
   return (
     <ButtonWrapper>
@@ -30,4 +27,4 @@ const LunchDinnerButton = () => {
   );
 };
 
-export default LunchDinnerButton;
+export default LunchDinnerButton; 
