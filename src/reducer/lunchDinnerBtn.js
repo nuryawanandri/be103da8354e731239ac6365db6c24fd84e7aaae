@@ -4,7 +4,7 @@ export const initialState = {
   isOpenBtn: true,
 };
 
-export const luchDinnerBtnReducer = (state = initialState, action) => {
+export const lunchDinnerBtnReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_IS_OPEN_BTN:
       return {

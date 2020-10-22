@@ -14,6 +14,9 @@ export const ModalContainer = styled.div`
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  visibility: ${(props) => (props.isModalLocOpen ? "visible" : "hidden")};
+  opacity: ${(props) => (props.isModalLocOpen ? "1" : "0")};
+  transition: opacity 0.2s, linear;
 `;
 
 export const ModalContent = styled.div`
