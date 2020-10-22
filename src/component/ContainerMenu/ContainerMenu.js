@@ -11,10 +11,8 @@ const ContainerMenu = (props) => {
 
   const onScroll = (e) => {
     if (lastScroll < containerRef.current.scrollTop) {
-      console.log("goDown");
       props.setIsOpenBtn(false);
     } else {
-      console.log("goUp");
       props.setIsOpenBtn(true);
     }
     setLastScroll(containerRef.current.scrollTop);

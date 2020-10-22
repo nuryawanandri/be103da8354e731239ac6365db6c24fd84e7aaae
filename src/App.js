@@ -9,10 +9,12 @@ import ActiveDate from "./component/ActiveDate/ActiveDate";
 import PopUpCart from "./component/PopUpCart/PopUpCart";
 import Location from "./component/Location/Location";
 import ContainerMenu from "./component/ContainerMenu/ContainerMenu";
+import ModalLocation from "./component/ModalLocation/ModalLocation";
 
 function App() {
   return (
     <ContainerBox>
+      <ModalLocation />
       <ContainerContent>
         <Location />
         <SelectionDate />
